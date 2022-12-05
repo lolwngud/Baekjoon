@@ -4,21 +4,32 @@
 int  main()
 {
     char    str[101];
+    char    c = 'a';
 
     scanf("%s", str);
-    int a = 97;
-    while (a <= 123)
+    size_t len = strlen(str);
+    int    s[26] = {0};
+    while (c <= 'z')
     {
         int i = 0;
-        while (i < strlen(str))
+        while (i < len)
         {
-            if (str[i] == (char)a)
-                printf("%d ", i);
+            if (str[i] == c)
+            {
+                s[c - 'a'] = i;
                 break;
+            }
+            s[c - 'a'] = -1;
             i++;
         }
-        if (i == strlen(str))
-            printf("-1 ");
-        a++;
+        c++;
+    }
+    int i = 0;
+    while(i < 26)
+    {
+        printf("%d", s[i]);
+        if (i < 25)
+            printf(" ");
+        i++;
     }
 }
