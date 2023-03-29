@@ -2,11 +2,7 @@
 
 int main()
 {
-    char str[100];
-    while (1)
-    {
-        if(!scanf("%[^\n]",str))
-            break;
-        printf("%s\n",str);
-    }
+    char a;
+    while (scanf("%c",&a) != -1)
+        printf("%c",a);
 }
