@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "3.최소최대.C": "cpp",
-        "string.h": "c"
+        "string.h": "c",
+        "2.최소공배수.C": "cpp"
     }
 }
